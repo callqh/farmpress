@@ -1,0 +1,26 @@
+{
+  "name": "farmpress",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Static document generation based on Farm",
+  "main": "index.js",
+  "bin": {
+    "farmpress": "bin/farmpress.js"
+  },
+  "scripts": {
+    "start": "tsc -b -w",
+    "doc": "node ./bin/farmpress.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "farmup": "^0.1.5",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@farmfe/core": "^1.6.3",
+    "cac": "^6.7.14"
+  }
+}
