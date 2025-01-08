@@ -31,7 +31,5 @@ export const dev = async () => {
     });
   } catch (error) {
     logger.error(`Failed to start server:\n ${error}`);
-    process.exit(1);
   }
-
 }
