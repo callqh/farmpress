@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ESNext"],
+    "noEmit": false,
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "target": "es2020",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": false,
+    "declaration": true,
+    "outDir": "./dist",
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "isolatedModules": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@farmpress/cli",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@farmpress/core": "workspace:*",
+    "cac": "^6.7.14"
+  }
+}
