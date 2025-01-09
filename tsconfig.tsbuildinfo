@@ -1,1 +1,1 @@
-{"root":["./src/node/cli.ts","./src/node/dev.ts","./src/node/index.ts"],"version":"5.7.2"}
+{"root":["./src/global.d.ts","./src/mdx/index.ts","./src/mdx/plugin.ts","./src/node/build.ts","./src/node/cli.ts","./src/node/dev.ts","./src/node/index.ts","./src/runtime/index.tsx"],"version":"5.7.2"}

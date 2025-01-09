@@ -16,11 +16,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@farmfe/plugin-react": "^1.2.6",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
     "farmup": "^0.1.5",
+    "react-refresh": "^0.16.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
     "@farmfe/core": "^1.6.3",
-    "cac": "^6.7.14"
+    "@mdx-js/react": "^3.1.0",
+    "@rspress/mdx-rs": "^0.6.4",
+    "cac": "^6.7.14",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
