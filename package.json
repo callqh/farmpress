@@ -1,21 +1,25 @@
 {
-  "name": "farmpress",
-  "type": "module",
-  "version": "0.0.1",
-  "description": "Static document generation based on Farm",
-  "main": "index.js",
-  "bin": {
-    "farmpress": "bin/farmpress.js"
-  },
+  "private": true,
   "scripts": {
-    "start": "tsc -b -w",
-    "doc": "node ./bin/farmpress.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo build",
+    "start": "turbo start",
+    "lint": "turbo lint",
+    "clean": "turbo clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build --filter=docs^... && changeset publish"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=18"
+  },
+  "name": "with-changesets",
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.3",
     "@farmfe/plugin-react": "^1.2.6",
     "@types/compression": "^1.7.5",
     "@types/fs-extra": "^11.0.4",

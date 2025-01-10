@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.json",
+  "declaration": true,
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "baseUrl": "./",
+    "outDir": "dist",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "isolatedModules": true
+  },
+  "include": [
+    "src",
+    "vitest.config.ts",
+    "modern.config.ts"
+  ],
+  "exclude": [
+    "**/node_modules"
+  ]
+}

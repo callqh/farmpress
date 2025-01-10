@@ -1,1 +1,0 @@
-{"root":["./src/global.d.ts","./src/mdx/index.ts","./src/mdx/plugin.ts","./src/node/build.ts","./src/node/cli.ts","./src/node/dev.ts","./src/node/index.ts","./src/node/server.ts","./src/runtime/app.tsx","./src/runtime/cliententry.tsx","./src/runtime/index.tsx","./src/runtime/ssrentry.tsx"],"version":"5.7.2"}
