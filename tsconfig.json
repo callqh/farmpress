@@ -11,7 +11,7 @@
     "target": "es2020",
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "declaration": true,
+    "declaration": false,
     "inlineSources": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

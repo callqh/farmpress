@@ -2,12 +2,13 @@ import { type JsPlugin } from '@farmfe/core';
 import { compile } from "@rspress/mdx-rs";
 import fs from 'fs';
 
-export function farmfePluginMdx(): JsPlugin {
+export function farmfePluginMdx({ isSSR }: { isSSR: boolean }): JsPlugin {
+  console.log(isSSR)
   return {
     name: "farmfe-plugin-mdx",
     load: {
       filters: {
-        resolvedPaths: ['\\.md$'],
+        resolvedPaths: ['.md$'],
       },
       executor: async ({ resolvedPath }) => {
         const result = await compile({
@@ -17,7 +18,7 @@ export function farmfePluginMdx(): JsPlugin {
           development: true,
           root: "",
         });
-        console.log(resolvedPath, result);
+        // console.log(resolvedPath, result);
         return {
           moduleType: 'jsx',
           content: result.code
