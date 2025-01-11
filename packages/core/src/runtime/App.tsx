@@ -1,5 +1,5 @@
-import { matchRoutes } from "react-router";
-import { routers } from "./index.js";
+import { matchRoutes } from 'react-router';
+import { routers } from './index.js';
 
 export const initPageData = async (pathname: string) => {
   const route = matchRoutes(routers, pathname);
@@ -11,4 +11,4 @@ export const initPageData = async (pathname: string) => {
       mod,
     };
   }
-}
+};

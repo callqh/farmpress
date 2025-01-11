@@ -3,9 +3,12 @@
   "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "files": ["dist", "bin", "index.html"],
   "scripts": {
-    "start": "tsc -w"
+    "start": "tsc -w",
+    "format": "pnpm biome format --write",
+    "lint": "biome check --write ./src"
   },
   "keywords": [],
   "author": "",

@@ -1,8 +1,8 @@
-import sirv from 'sirv';
+import path from 'node:path';
+import { cwd } from 'node:process';
 import compression from 'compression';
 import polka from 'polka';
-import path from 'path';
-import { cwd } from 'process';
+import sirv from 'sirv';
 
 export interface CLIServeOption {
   base?: string;
@@ -37,9 +37,7 @@ export async function server(options: ServeOptions) {
         if (err) {
           throw err;
         }
-        console.log(
-          `Preview server running at http://${host}:${port}/${base}/\n`,
-        );
+        console.log(`Preview server running at http://${host}:${port}/${base}/\n`);
       });
   } else {
     polka()

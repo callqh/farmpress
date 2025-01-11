@@ -1,11 +1,11 @@
-import { type JsPlugin } from '@farmfe/core';
-import { compile } from "@rspress/mdx-rs";
-import fs from 'fs';
+import fs from 'node:fs';
+import type { JsPlugin } from '@farmfe/core';
+import { compile } from '@rspress/mdx-rs';
 
 export function farmfePluginMdx({ isSSR }: { isSSR: boolean }): JsPlugin {
-  console.log(isSSR)
+  console.log(isSSR);
   return {
-    name: "farmfe-plugin-mdx",
+    name: 'farmfe-plugin-mdx',
     load: {
       filters: {
         resolvedPaths: ['.md$'],
@@ -16,14 +16,14 @@ export function farmfePluginMdx({ isSSR }: { isSSR: boolean }): JsPlugin {
           value: fs.readFileSync(resolvedPath, 'utf-8'),
           filepath: resolvedPath,
           development: true,
-          root: "",
+          root: '',
         });
         // console.log(resolvedPath, result);
         return {
           moduleType: 'jsx',
-          content: result.code
-        }
-      }
+          content: result.code,
+        };
+      },
     },
   };
 }
