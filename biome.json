@@ -3,16 +3,18 @@
   "vcs": {
     "enabled": false,
     "clientKind": "git",
-    "useIgnoreFile": false
+    "useIgnoreFile": false,
+    "defaultBranch": "main"
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": []
+    "ignore": ["node_modules", "dist"]
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "indentWidth": 2
+    "indentWidth": 2,
+    "lineEnding": "lf"
   },
   "organizeImports": {
     "enabled": true
@@ -25,9 +27,11 @@
   },
   "javascript": {
     "formatter": {
+      "jsxQuoteStyle": "single",
+      "bracketSpacing": true,
       "quoteStyle": "single",
       "semicolons": "always",
-      "lineWidth": 120
+      "lineWidth": 80
     }
   }
 }

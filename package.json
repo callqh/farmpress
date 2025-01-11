@@ -4,7 +4,7 @@
     "build": "turbo build",
     "start": "turbo start",
     "clean": "turbo clean && rm -rf node_modules",
-    "check": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true --apply",
+    "check": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true --write",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo build --filter=docs^... && changeset publish"
@@ -25,7 +25,7 @@
     "fs-extra": "^11.2.0"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true --apply"
+    "*.{ts,tsx}": "pnpm check"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
