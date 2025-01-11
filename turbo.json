@@ -10,18 +10,12 @@
       "outputs": ["coverage/**"],
       "dependsOn": []
     },
-    "lint": {
-      "cache": true
-    },
     "start": {
       "cache": false,
       "persistent": true
     },
     "clean": {
       "cache": false
-    },
-    "format": {
-      "cache": true
     }
   }
 }

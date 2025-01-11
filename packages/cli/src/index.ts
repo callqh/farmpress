@@ -3,7 +3,7 @@ import { cac } from 'cac';
 
 const cli = cac('farmpress');
 
-cli.command('dev', 'start server').action((dir, options) => {
+cli.command('dev', 'start server').action(() => {
   dev();
 });
 

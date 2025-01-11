@@ -3,9 +3,8 @@
   "scripts": {
     "build": "turbo build",
     "start": "turbo start",
-    "lint": "turbo lint",
     "clean": "turbo clean && rm -rf node_modules",
-    "format": "turbo format",
+    "check": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true --apply",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo build --filter=docs^... && changeset publish"
@@ -25,8 +24,10 @@
   "dependencies": {
     "fs-extra": "^11.2.0"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true --apply"
+  },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged",
-    "pre-push": "npm run format"
+    "pre-commit": "npx lint-staged"
   }
 }

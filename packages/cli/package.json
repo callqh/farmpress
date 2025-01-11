@@ -5,9 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc -w",
-    "format": "pnpm biome format --write",
-    "lint": "biome check --write ./src"
+    "start": "tsc -w"
   },
   "keywords": [],
   "author": "",
