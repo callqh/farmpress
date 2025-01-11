@@ -1,16 +1,16 @@
-import { build, logger } from "@farmfe/core";
+import { build as farmBuild, logger } from "@farmfe/core";
 import path from "path";
 import { cwd } from "process";
-import { farmfePluginMdx } from "../mdx/plugin.js";
-import { __dirname } from "./dev.js";
+import { farmfePluginMdx } from "./mdx/plugin";
 import fs from 'fs-extra'
 
-export const _build = async () => {
+
+export const build = async () => {
   console.log('build is starting')
   const routers = await import(path.resolve(cwd(), "./dist/runtime/index.js")).then(res => res.routers);
   try {
     // 构建server端代码
-    await build({
+    await farmBuild({
       root: cwd(),
       compilation: {
         resolve: {
@@ -30,7 +30,7 @@ export const _build = async () => {
       ],
     });
     // 构建client端代码
-    await build({
+    await farmBuild({
       root: cwd(),
       compilation: {
         resolve: {

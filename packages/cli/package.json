@@ -9,5 +9,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@farmpress/core": "workspace:*",
+    "cac": "^6.7.14"
+  }
 }

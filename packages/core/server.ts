@@ -17,7 +17,7 @@ interface ServeOptions {
 }
 
 // Serve ssg site in production
-export async function serve(options: ServeOptions) {
+export async function server(options: ServeOptions) {
   const { port: userPort, host: userHost } = options;
   const envPort = process.env.PORT;
   const envHost = process.env.HOST;

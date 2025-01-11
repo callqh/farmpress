@@ -8,16 +8,17 @@
     "noImplicitAny": true,
     "noUnusedParameters": true,
     "target": "es2020",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "declaration": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": false,
+    "declaration": true,
+    "outDir": "./dist",
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "isolatedModules": true
   }
 }

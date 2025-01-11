@@ -3,17 +3,17 @@ import { matchRoutes, useLocation } from "react-router";
 import { MDXProvider } from '@mdx-js/react'
 // import path from 'path'
 // import { cwd } from 'process'
-import { lazyWithPreload } from "react-lazy-with-preload";
-console.log('hello world')
-export const routers = [
-  {
-    path: '/',
-    element: lazyWithPreload(() => import('../../docs/home.md')),
-  },
-  {
-    path: '/about',
-    element: lazyWithPreload(() => import('../../docs/about.md')),
-  }
+// import { lazyWithPreload } from "react-lazy-with-preload";
+
+export const routers: any = [
+  // {
+  //   path: '/',
+  //   element: lazyWithPreload(() => import('../../docs/home.md')),
+  // },
+  // {
+  //   path: '/about',
+  //   element: lazyWithPreload(() => import('../../docs/about.md')),
+  // }
 ]
 
 export default () => {
