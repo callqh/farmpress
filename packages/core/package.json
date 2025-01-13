@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
-  "files": ["dist", "bin", "index.html"],
+  "files": ["dist", "bin", "index.html", "src/runtime"],
   "scripts": {
     "start": "farm watch",
     "build": "farm build"
@@ -12,6 +12,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "@farmfe/core": "^1.6.4",
+    "@rspress/mdx-rs": "^0.6.5"
+  },
   "dependencies": {
     "@mdx-js/react": "^3.1.0",
     "core-js": "^3.40.0",
@@ -19,8 +23,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-lazy-with-preload": "^2.2.1",
-    "react-router": "^7.1.1",
-    "@rspress/mdx-rs": "^0.6.5"
+    "react-router": "^7.1.1"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

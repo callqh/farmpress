@@ -2,6 +2,9 @@ import { defineConfig } from '@farmfe/core';
 
 export default defineConfig({
   root: process.cwd(),
+  server: {
+    port: 1234,
+  },
   compilation: {
     persistentCache: false,
     input: {
@@ -12,5 +15,6 @@ export default defineConfig({
     },
     sourcemap: false,
     presetEnv: false,
+    external: ['@farmfe/core', '@rspress/mdx-rs'],
   },
 });

@@ -1,14 +1,17 @@
 import { defineConfig } from '@farmfe/core';
 
 export default defineConfig({
+  root: process.cwd(),
   compilation: {
+    persistentCache: false,
     input: {
       index: 'src/index.ts',
-      // runtime: './src/runtime.ts',
     },
     output: {
-      // targetEnv: 'node',
+      targetEnv: 'node',
     },
+    sourcemap: false,
+    presetEnv: false,
+    external: ['@farmfe/core', '@rspress/mdx-rs'],
   },
-  // plugins: ['@farmfe/plugin-react'],
 });

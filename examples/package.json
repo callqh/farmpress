@@ -11,6 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@farmpress/cli": "workspace:*"
+    "@farmpress/cli": "workspace:*",
+    "@farmpress/core": "workspace:*"
+  },
+  "devDependencies": {
+    "react-refresh": "^0.16.0"
   }
 }
