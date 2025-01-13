@@ -1,10 +1,12 @@
 {
+  "name": "@farmfe/farmpress",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "start": "turbo start",
     "clean": "turbo clean && rm -rf node_modules",
     "check": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true --write",
+    "start:example": "cd examples && pnpm start:docs",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo build --filter=docs^... && changeset publish"
@@ -13,17 +15,19 @@
   "engines": {
     "node": ">=18"
   },
-  "name": "with-changesets",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
+    "@types/node": "^22.10.5",
     "lint-staged": "^15.3.0",
     "simple-git-hooks": "^2.11.1",
     "turbo": "^2.3.3",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@farmfe/cli": "^1.0.4",
+    "@farmfe/core": "^1.6.4",
     "fs-extra": "^11.2.0"
   },
   "lint-staged": {
