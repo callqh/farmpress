@@ -1,4 +1,3 @@
-import fs from 'node:fs';
 import type { JsPlugin } from '@farmfe/core';
 
 export function farmfePluginMdx({ isSSR }: { isSSR: boolean }): JsPlugin {
@@ -11,17 +10,18 @@ export function farmfePluginMdx({ isSSR }: { isSSR: boolean }): JsPlugin {
         resolvedPaths: ['.md$'],
       },
       executor: async ({ resolvedPath }) => {
-        const result = await compile({
-          // The mdx content
-          value: fs.readFileSync(resolvedPath, 'utf-8'),
-          filepath: resolvedPath,
-          development: true,
-          root: '',
-        });
+        const result = '';
+        // await compile({
+        //   // The mdx content
+        //   value: fs.readFileSync(resolvedPath, 'utf-8'),
+        //   filepath: resolvedPath,
+        //   development: true,
+        //   root: '',
+        // });
         // console.log(resolvedPath, result);
         return {
           moduleType: 'jsx',
-          content: result.code,
+          content: result,
         };
       },
     },
