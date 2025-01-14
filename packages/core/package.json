@@ -5,9 +5,17 @@
   "description": "",
   "main": "./dist/index.js",
   "files": ["dist", "bin", "index.html", "src/runtime"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "start": "farm watch",
-    "build": "farm build"
+    "build": "farm build",
+    "clean": "rm -rf dist node_modules"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +37,7 @@
     "@changesets/cli": "^2.27.1",
     "@farmfe/core": "^1.6.3",
     "@farmfe/plugin-react": "^1.2.6",
+    "@farmfe/js-plugin-dts": "^0.6.4",
     "@types/compression": "^1.7.5",
     "@types/fs-extra": "^11.0.4",
     "@types/loadable__component": "^5.13.9",

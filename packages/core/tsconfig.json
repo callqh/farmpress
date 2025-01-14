@@ -5,7 +5,7 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "target": "ESNext",
-    "declaration": false
+    "jsx": "react-jsx"
   },
-  "exclude": ["**/node_modules"]
+  "exclude": ["node_modules"]
 }
