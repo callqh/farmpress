@@ -2,7 +2,7 @@ import path from 'node:path';
 import { cwd } from 'node:process';
 import { build as farmBuild, logger } from '@farmfe/core';
 import fs from 'fs-extra';
-import { farmfePluginMdx } from './mdx/plugin';
+import { farmfePluginMdx } from '../mdx/plugin';
 
 export const build = async () => {
   console.log('build is starting');

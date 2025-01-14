@@ -11,8 +11,9 @@
       "dependsOn": []
     },
     "start": {
-      "cache": false,
-      "persistent": true
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**/*"],
+      "cache": false
     },
     "clean": {
       "cache": false

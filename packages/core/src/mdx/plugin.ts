@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import type { JsPlugin } from '@farmfe/core';
-import { compile } from '@rspress/mdx-rs';
 
 export function farmfePluginMdx({ isSSR }: { isSSR: boolean }): JsPlugin {
   console.log(isSSR);
+  const { compile } = require('@rspress/mdx-rs');
   return {
     name: 'farmfe-plugin-mdx',
     load: {

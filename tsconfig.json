@@ -13,9 +13,6 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": false,
     "declaration": true,
-    "outDir": "./dist",
-    "jsx": "preserve",
-    "baseUrl": "./",
     "isolatedModules": true
   }
 }

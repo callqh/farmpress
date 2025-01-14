@@ -4,12 +4,17 @@
   "type": "module",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "farmpress": "./bin/farmpress.js"
+  },
   "scripts": {
-    "start": "tsc -w"
+    "start": "farm watch",
+    "build": "farm build",
+    "clean": "rm -rf dist node_modules"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
+  "files": ["dist", "bin"],
   "dependencies": {
     "@farmpress/core": "workspace:*",
     "cac": "^6.7.14"
