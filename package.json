@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "start": "turbo start",
+    "test": "vitest",
     "clean": "turbo clean && rm -rf node_modules",
     "check": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true --write",
     "start:example": "cd examples && pnpm start:docs",
@@ -23,6 +24,7 @@
     "@farmfe/core": "^1.6.4",
     "@farmfe/js-plugin-dts": "^0.6.4",
     "@types/node": "^22.10.5",
+    "@vitest/coverage-v8": "2.1.8",
     "lint-staged": "^15.3.0",
     "simple-git-hooks": "^2.11.1",
     "turbo": "^2.3.3",
