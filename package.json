@@ -9,7 +9,8 @@
     "start:example": "cd examples && pnpm start:docs",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo build --filter=docs^... && changeset publish"
+    "release": "turbo build --filter=docs^... && changeset publish",
+    "prepare": "pnpm build"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {

@@ -1,7 +1,6 @@
 import { defineConfig } from '@farmfe/core';
 
 export default defineConfig({
-  root: process.cwd(),
   server: {
     port: 1234,
   },
