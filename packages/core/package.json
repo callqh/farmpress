@@ -1,7 +1,7 @@
 {
   "name": "@farmpress/core",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
   "files": ["dist", "bin", "index.html", "src/runtime"],
@@ -25,6 +25,7 @@
     "@rspress/mdx-rs": "^0.6.5"
   },
   "dependencies": {
+    "@farmpress/shared": "workspace:*",
     "@mdx-js/react": "^3.1.0",
     "core-js": "^3.40.0",
     "express": "^4.21.2",
@@ -38,7 +39,6 @@
     "@changesets/cli": "^2.27.1",
     "@farmfe/core": "^1.6.3",
     "@farmfe/plugin-react": "^1.2.6",
-    "@farmfe/js-plugin-dts": "^0.6.4",
     "@types/compression": "^1.7.5",
     "@types/fs-extra": "^11.0.4",
     "@types/loadable__component": "^5.13.9",

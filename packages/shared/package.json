@@ -1,0 +1,17 @@
+{
+  "name": "@farmpress/shared",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "start": "farm watch",
+    "build": "farm build",
+    "clean": "rm -rf dist node_modules"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "files": ["dist"]
+}

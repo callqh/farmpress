@@ -13,7 +13,7 @@
     "start": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**/*"],
-      "cache": false
+      "inputs": ["src/**/*", "tsconfig.json", "package.json", "farm.config.*"]
     },
     "clean": {
       "cache": false

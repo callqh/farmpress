@@ -1,8 +1,10 @@
 import { logger, start } from '@farmfe/core';
+import type { UserConfig } from '@farmpress/shared';
 import { farmfePluginMdx } from '../mdx/plugin';
 import { INDEX_HTML, PUBLIC_DIR } from './constans';
 
-export const dev = async () => {
+export const dev = async (config: UserConfig) => {
+  const { port } = config;
   try {
     await start({
       publicDir: PUBLIC_DIR,
@@ -12,7 +14,7 @@ export const dev = async () => {
         },
       },
       server: {
-        port: 6532,
+        port,
       },
       plugins: ['@farmfe/plugin-react', farmfePluginMdx({ isSSR: false })],
     });
