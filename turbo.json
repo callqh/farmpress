@@ -2,18 +2,38 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "build": {
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
-      "dependsOn": ["^build"]
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "dependsOn": [
+        "^build"
+      ]
     },
     "test": {
-      "outputs": ["coverage/**"],
+      "outputs": [
+        "coverage/**"
+      ],
       "dependsOn": []
     },
     "start": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**/*"],
-      "inputs": ["src/**/*", "tsconfig.json", "package.json", "farm.config.*"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**/*"
+      ],
+      "inputs": [
+        "src/**/*",
+        "tsconfig.json",
+        "package.json",
+        "farm.config.ts"
+      ]
     },
     "clean": {
       "cache": false

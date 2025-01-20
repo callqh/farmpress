@@ -1,21 +1,9 @@
 import { MDXProvider } from '@mdx-js/react';
 import { Suspense, createElement } from 'react';
 import { matchRoutes, useLocation } from 'react-router';
-// import path from 'path'
-// import { cwd } from 'process'
-// import { lazyWithPreload } from "react-lazy-with-preload";
+import { routers } from 'virtual-router';
 
-export const routers = [
-  {
-    path: '/',
-    // element: lazyWithPreload(() => import('../../docs/home.md')),
-  },
-  // {
-  //   path: '/about',
-  //   element: lazyWithPreload(() => import('../../docs/about.md')),
-  // }
-];
-
+console.log(routers, '虚拟路由');
 export default () => {
   const { pathname } = useLocation();
   const route = matchRoutes(routers, pathname);
